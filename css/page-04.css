@@ -1,0 +1,435 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  background-image: url("/images/page-4/Rectangle.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+}
+
+/* =========================
+   SIGNUP CARD
+========================= */
+
+.signup-card {
+  position: relative;
+  box-shadow: 2px 2px 7px black;
+  width: 490px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 25px;
+  padding: 35px;
+  text-align: center;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.card-detail {
+  padding: 10px;
+  height: 100%;
+}
+
+.card-detail * {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-btn {
+  position: absolute;
+
+  right: -35px;
+  top: -20px;
+
+  width: 22px;
+  height: 22px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  margin-bottom: 10px;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.card-detail h1 {
+  font-size: 26px;
+  margin-top: 25px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   LOGIN TEXT
+========================= */
+
+.login-text {
+  font-size: 17px;
+  color: rgba(74, 73, 73, 0.822);
+  margin-bottom: 40px;
+}
+
+.login-text a {
+  font-size: 18px;
+  font-weight: 600;
+  color: blue;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+
+.social-btn {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 33px;
+  outline: none;
+  font-size: 17px;
+  font-weight: 600;
+  border: 1px solid;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(248, 244, 244);
+}
+
+.social-btn:hover {
+  background-color: rgb(203, 200, 200);
+}
+
+.social-btn img {
+  width: 23px;
+  height: 23px;
+  margin-right: 25px;
+}
+
+/* =========================
+   OR
+========================= */
+
+.or img {
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  width: 100%;
+  text-align: start;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.form input:focus {
+  border-color: #999;
+}
+.form input {
+  margin-top: 0;
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgb(156, 155, 155);
+  outline: none;
+  font-size: 16px;
+}
+
+.close-btn {
+  position: absolute;
+  right: -35px;
+  top: -20px;
+  width: 22px;
+  height: 22px;
+}
+
+/* =========================
+   CREATE BUTTON
+========================= */
+
+.create-btn {
+  width: 100%;
+  padding: 19px;
+  border-radius: 25px;
+  border: none;
+  background-color: #72717162;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+}
+
+.create-btn:hover {
+  background-color: #4d4c4c62;
+}
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  body {
+    padding: 25px;
+  }
+
+  .signup-card {
+    width: 400px;
+    padding: 30px;
+  }
+
+  .card-detail h1 {
+    font-size: 24px;
+  }
+
+  .login-text {
+    font-size: 13px;
+  }
+
+  .social-btn {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 15px;
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .signup-card {
+    max-width: 355px;
+
+    padding: 22px 25px;
+
+    border-radius: 15px;
+  }
+
+  .logo {
+    text-align: left;
+
+    margin-bottom: 8px;
+  }
+
+  .logo img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .card-detail h1 {
+    font-size: 20px;
+
+    margin-top: 5px;
+    margin-bottom: 4px;
+  }
+
+  .login-text {
+    font-size: 10px;
+
+    margin-bottom: 17px;
+  }
+
+  .login-text a {
+    font-size: 12px;
+  }
+
+  .social-btn {
+    padding: 7px 10px;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+  }
+
+  .social-btn img {
+    width: 15px;
+    height: 15px;
+
+    margin-right: 8px;
+  }
+
+  .or {
+    margin: 16px 0;
+
+    gap: 8px;
+  }
+
+  .or p {
+    font-size: 12px;
+  }
+
+  .form label {
+    font-size: 11px;
+
+    margin-bottom: 6px;
+  }
+
+  .form input {
+    padding: 8px 10px;
+
+    font-size: 12px;
+
+    margin-bottom: 14px;
+  }
+
+  .create-btn {
+    padding: 9px;
+
+    font-size: 12px;
+  }
+
+  .close-btn {
+    right: -5px;
+    top: -25px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+  body {
+    padding: 15px 10px;
+    background: none;
+    align-items: start;
+  }
+
+  .signup-card * {
+    margin-bottom: 20px;
+  }
+  .signup-card {
+    background-color: #cdccccb1;
+    width: 100%;
+    height: fit-content;
+    padding: 18px 20px;
+    border-radius: 12px;
+  }
+
+  .logo img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .card-detail h1 {
+    font-size: 17px;
+  }
+
+  .login-text {
+    font-size: 10px;
+  }
+
+  .login-text a {
+    font-size: 10px;
+  }
+
+  .social-btn {
+    min-height: 32px;
+    padding: 0;
+    font-size: 10px;
+  }
+
+  .social-btn img {
+    width: 13px;
+    height: 13px;
+  }
+
+  .form label {
+    font-size: 9px;
+  }
+
+  .form input {
+    font-size: 9px;
+
+    padding: 7px 9px;
+  }
+
+  .create-btn {
+    font-size: 10px;
+
+    padding: 8px;
+  }
+}
+
+/* =========================
+   VERY SMALL SCREEN
+========================= */
+
+@media (max-width: 320px) {
+  body {
+    padding: 10px;
+  }
+
+  .signup-card {
+    padding: 15px;
+  }
+
+  .card-detail h1 {
+    font-size: 16px;
+  }
+
+  .social-btn {
+    font-size: 8px;
+  }
+
+  .form label {
+    font-size: 8px;
+  }
+
+  .form input {
+    font-size: 8px;
+  }
+
+  .create-btn {
+    font-size: 9px;
+  }
+}

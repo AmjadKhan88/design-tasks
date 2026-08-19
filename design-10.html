@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design no-10</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+        }
+
+        .open {
+            display: flex;
+            position: absolute;
+            top: 101%;
+            max-width: 80%;
+            width: 100%;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%);
+            padding: 10px;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body class="min-h-screen bg-[url('images/bg-design-10.jpg')] bg-cover bg-no-repeat bg-center">
+    <div class="absolute -z-4 inset-0 bg-black/50 pointer-events-none"></div>
+    <header class="bg-white relative">
+        <nav class="flex justify-between max-w-[1200px] mx-auto h-[73px] gap-1 items-center px-3 sm:px-5">
+            <div class="font-semibold text-sm md:text-lg md:text-2xl">Petals & Picks</div>
+            <div class="flex gap-3 md:gap-10 items-center">
+                <div id="search-input"
+                    class="flex gap-[8px] max-w-[117px] max-sm:hidden items-center bg-white sm:bg-[#F0F0F3CC] px-3 py-1 sm:py-2  rounded-[32px] has-[:focus]:shadow md:has-[:focus]:max-w-sm  transition-all duration-200">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19.0303 17.9697C18.7374 17.6768 18.2626 17.6768 17.9697 17.9697C17.6768 18.2626 17.6768 18.7374 17.9697 19.0303L19.0303 17.9697ZM21.4697 22.5303C21.7626 22.8232 22.2374 22.8232 22.5303 22.5303C22.8232 22.2374 22.8232 21.7626 22.5303 21.4697L21.4697 22.5303ZM21.75 11.5C21.75 5.83908 17.1609 1.25 11.5 1.25V2.75C16.3325 2.75 20.25 6.66751 20.25 11.5H21.75ZM11.5 1.25C5.83908 1.25 1.25 5.83908 1.25 11.5H2.75C2.75 6.66751 6.66751 2.75 11.5 2.75V1.25ZM1.25 11.5C1.25 17.1609 5.83908 21.75 11.5 21.75V20.25C6.66751 20.25 2.75 16.3325 2.75 11.5H1.25ZM11.5 21.75C17.1609 21.75 21.75 17.1609 21.75 11.5H20.25C20.25 16.3325 16.3325 20.25 11.5 20.25V21.75ZM17.9697 19.0303L21.4697 22.5303L22.5303 21.4697L19.0303 17.9697L17.9697 19.0303Z"
+                            fill="#28303F" />
+                    </svg>
+                    <input class="bg-transprent w-full sm:text-gray-600 outline-none text-sm group-hover:border-1"
+                        type="search" placeholder="Search">
+                </div>
+                <svg id="toggle-search" class="sm:hidden" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.0303 17.9697C18.7374 17.6768 18.2626 17.6768 17.9697 17.9697C17.6768 18.2626 17.6768 18.7374 17.9697 19.0303L19.0303 17.9697ZM21.4697 22.5303C21.7626 22.8232 22.2374 22.8232 22.5303 22.5303C22.8232 22.2374 22.8232 21.7626 22.5303 21.4697L21.4697 22.5303ZM21.75 11.5C21.75 5.83908 17.1609 1.25 11.5 1.25V2.75C16.3325 2.75 20.25 6.66751 20.25 11.5H21.75ZM11.5 1.25C5.83908 1.25 1.25 5.83908 1.25 11.5H2.75C2.75 6.66751 6.66751 2.75 11.5 2.75V1.25ZM1.25 11.5C1.25 17.1609 5.83908 21.75 11.5 21.75V20.25C6.66751 20.25 2.75 16.3325 2.75 11.5H1.25ZM11.5 21.75C17.1609 21.75 21.75 17.1609 21.75 11.5H20.25C20.25 16.3325 16.3325 20.25 11.5 20.25V21.75ZM17.9697 19.0303L21.4697 22.5303L22.5303 21.4697L19.0303 17.9697L17.9697 19.0303Z"
+                        fill="#28303F" />
+                </svg>
+                <select class="bg-transprent text-gray-800 max-sm:text-sm  outline-none">
+                    <option value="en-US" selected class="bg-white">English (US)</option>
+                </select>
+
+                <button type="button" id="login-btn" class="bg-black text-white px-4 py-2 rounded-lg text-[10px] sm:text-sm"
+                    style="height: fit-content;">Sign
+                    up</button>
+
+
+                <div id="form-login"
+                    class="absolute hidden right-0 lg:right-13 top-[130%]  bg-white text-gray-500 max-w-96  mx-4 w-full md:p-6 p-8 text-left text-sm rounded-xl shadow-[0px_0px_10px_0px] shadow-black/10 transition-all duration-200             z-index: 500;">
+                    <div class="relative">
+                        <svg id="login-close"
+                            class="w-6 absolute right-0 bg-[#F0F0F3CC] h-6 p-1  -top-4 rounded-[50%] hover:bg-red-300 "
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                            viewBox="0 0 30 30">
+                            <path
+                                d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z">
+                            </path>
+                        </svg>
+                        <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800">Welcome back</h2>
+                        <form>
+                            <input id="email"
+                                class="w-full bg-transparent border my-3 border-gray-500/30 outline-none rounded-md py-2.5 px-4"
+                                type="email" placeholder="Enter your email" required>
+
+
+                            <button type="submit"
+                                class="w-full mt-1 mb-3 bg-black py-3 rounded-full text-white hover:bg-black/90 cursor-pointer">Log
+                                in</button>
+                        </form>
+
+                        <p class="flex items-center justify-center my-3">
+                            <span class="flex-grow border-t border-gray-400"></span>
+                            <span class="mx-4 font-semibold">OR</span>
+                            <span class="flex-grow border-t border-gray-400"></span>
+                        </p>
+
+                        <button type="button"
+                            class="w-full flex items-center gap-2 justify-center mt-5 py-2.5 rounded-full border-1 border-gray-300 text-[12px]">
+                            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                height="100" viewBox="0 0 48 48">
+                                <path fill="#FFC107"
+                                    d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                                </path>
+                                <path fill="#FF3D00"
+                                    d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                                </path>
+                                <path fill="#4CAF50"
+                                    d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                                </path>
+                                <path fill="#1976D2"
+                                    d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                                </path>
+                            </svg>
+                            Continue with google
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="mt-[100px] max-w-xl mx-auto text-center ">
+        <h1 class="text-slate-100 text-xl sm:text-2xl md:text-3xl  font-bold">hand-crafted bouquets delivered to your
+            door.</h1>
+        <p class="text-slate-300 text-sm max-w-md mx-auto mt-4 text-shadow">Bring the beauty of nature into your home
+            today. Our
+            master florists select the seasonal blooms to design stunning arrangements for any occasion. Stop wasting
+            time looking for the perfect gifts and start sharing love with flowers that stay vibrant and beautiful.</p>
+
+        <button class="bg-white font-bold px-10 py-3 rounded-lg mt-8">Explore flowers</button>
+    </section>
+
+
+
+    <script>
+        document.getElementById("toggle-search").addEventListener('click', () => {
+            document.getElementById("search-input").classList.toggle("open")
+        })
+
+        document.getElementById("login-btn").addEventListener("click", () => {
+            document.getElementById("form-login").style.display = 'block'
+        })
+
+        document.getElementById("login-close").addEventListener("click", () => {
+            document.getElementById("form-login").style.display = 'none'
+        })
+    </script>
+</body>
+
+</html>
